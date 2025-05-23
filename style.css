@@ -1,0 +1,786 @@
+body {
+  background: #080808;
+  background-image: radial-gradient(circle, #49494b 2%, transparent 6%);
+  background-size: 40px 40px;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDOR = Header                                                   **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(68, 68, 68, 0.4);
+  backdrop-filter: blur(2px);
+  border: 3px solid #000;
+  border-radius: 20px;
+  margin: 5px 5px 20px 5px;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+  align-items: center;   /* Centra verticalmente el logo y el menú */
+  gap: 2rem;             /* Espacio entre el logo y el menú */
+}
+
+
+.logo {
+  width: 80px;
+  height: auto;
+
+}
+
+.menu-header ul {
+  list-style: none;      /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 0;
+  display: flex;         /* Hace que los <li> estén en línea */
+  gap: 2rem;
+}
+
+.menu-header li {
+  font-size: 14px;
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.menu-header li:hover {
+  background-color: #444;
+  border-radius: 8px;
+  color: #03d5fa;
+  border-bottom: 2px solid #03d5fa;
+  box-shadow: 0 0 15px #03d5fa, 0 0 30px #03d5fa;
+  transform: translate(-0%, -10%) scale(0.95);
+
+}
+
+.menu-header li:active {
+  transform: translate(-0%, -10%) scale(0.95);
+  box-shadow: 0 0 8px #03d5fa, 0 0 15px #03d5fa;
+}
+
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Es, .Us {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.search input {
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  margin-left: 8px;
+  border: none; /* sin borde por defecto */
+  outline: none; /* quita el borde blanco de enfoque */
+  background-color: #222;
+  color: white;
+  height: 36px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.search:focus-within input {
+  width: 200px;
+  opacity: 1;
+  padding: 0 12px;
+  border: none;        /* aseguramos sin borde */
+  outline: none;       /* sin contorno blanco */
+}
+
+
+
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDOR = SIDEBAR                                                  **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+
+
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  height: calc(100vh - 40px); /* ocupa toda la altura menos márgenes */
+  background-color: rgba(68, 68, 68, 0.4);
+  backdrop-filter: blur(2px); 
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.foto {
+  background-color: #444;
+  padding: 5px 5px 2px;
+  border-radius: 25px 5px 25px 5px;
+  margin-bottom: 10px;
+}
+
+.img-perfil {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 25px 5px 25px 5px;
+}
+
+.info {
+  text-align: center; /* ← asegura que los textos estén centrados */
+}
+
+.info h3 {
+  color: white;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.info h5 {
+  margin: 0;
+  font-weight: normal;
+  color: #03d5fa;
+  
+}
+
+.Menu {
+  margin-top: 15px;
+}
+
+.Menu ul {transform: translate(-0%, -10%) scale(0.95);
+   font-size: 14px;
+  list-style: none;
+  padding: 0;
+  }
+
+.Menu li { 
+  display: flex;
+  align-items: center;  /* ← centra verticalmente */
+  gap: 20px;            /* espacio entre icono y texto */
+  color: #ddd;
+  margin-bottom: 15px;
+  padding:10px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 8px;  
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.Menu li:hover {
+  background-color: #444;
+  border-radius: 8px;
+  color: #03d5fa;
+  border-bottom: 2px solid #03d5fa;
+  box-shadow: 0 0 15px #03d5fa, 0 0 30px #03d5fa;
+  transform: translate(-0%, -10%) scale(0.95);
+  
+}
+
+.Menu li:active {
+  transform: translate(-0%, -10%) scale(0.95);
+  box-shadow: 0 0 8px #03d5fa, 0 0 15px #03d5fa;
+}
+
+.publicidad {
+  width: 60%;          /* que se ajuste al ancho del sidebar */
+  max-width: 200px;     /* nunca más grande que esto */
+  height: auto;         /* mantiene proporción */
+  display: block;
+
+}
+
+.redes {  
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  display: block;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.redes img {
+  margin-right: 15px;
+}
+
+
+.creditos {
+  margin-bottom: 15px;
+  color: white;
+}
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDORES = GENERALES                                              **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.container {
+  display: flex;  
+  margin-left: 290px; /* deja espacio para el sidebar fijo + margen */
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.main-content {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: auto
+}
+
+/* Fila horizontal (se reutiliza) */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+*.container2 {
+  margin-top: 0;
+  margin-left: 255px;     /* espacio para el sidebar */
+  margin-right: 20px;     /* no pongas 100% — rompe el layout */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDOR = NEW                                                      **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.new {
+  
+  position: relative;
+  flex: 2;
+  border: 3px solid #000;
+  border-radius: 20px;
+  color: white;
+  overflow: hidden;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .new, .trailers, .promotions{
+    flex: 1 1 100%;
+    order: 2;
+    min-height: 500px; /* 👈 asegúrate de que tenga espacio visible */
+    height: 20%;       /* opcional: evita altura fija si no quieres forzarla */
+    
+  }
+}
+
+
+.carousel-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;     /* Ocupa todo el ancho */
+  height: 100%;    /* Ocupa todo el alto */
+  object-fit: cover; /* Ajusta sin deformar */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 20px; /* opcional: suaviza los bordes */
+}
+
+.carousel-img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.carousel-controls {
+  height: 80px;
+  width: 40px;
+  border-bottom: 2px solid #03d5fa;
+  background: rgba(68, 68, 68, 0.4);
+  border-radius: 25px 5px 25px 5px;
+  backdrop-filter: blur(8px);
+  position: absolute;
+  bottom: 20px;
+  right: 20px; /* ← fijado a la derecha */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+
+.separator {
+  
+  width: 40px;
+  height: 2px;
+  background-color: white;
+  margin: 40px 0px 0px 0px;
+  border-radius: 10px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.anterior {
+
+  margin-bottom: 50px;  
+  left: 0.5rem;
+}
+
+.siguiente {
+
+  margin-top: 50px;  
+  right: 0.5rem;
+  
+}
+
+.carousel-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Esto las hace blancas */
+}
+
+.carousel-controls:hover {
+  box-shadow: 0 0 15px #03d5fa, 0 0 30px #03d5fa;
+  transform: translate(-0%, -10%) scale(0.95);
+}
+
+
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDOR = TRAILERS                                                 **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.trailers {
+  position: relative;
+  flex: 1;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 0; /* ← sin padding para que la imagen se alinee a los bordes */
+  overflow: hidden; /* ← evita que la imagen se desborde */
+  height: auto; /* puedes forzar un alto si deseas: ej. 250px */
+  display: flex;
+}
+
+.trailers img:first-child {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.img-play {
+  background-color: rgba(68, 68, 68, 0.4); /* gris con transparencia */
+  backdrop-filter: blur(10px);             /* desenfoque del fondo */
+  -webkit-backdrop-filter: blur(20px);     /* soporte para Safari */
+  border-bottom: 2px solid #03d5fa; /* Cambia el color y grosor a tu gusto */
+  padding: 10px;
+  border-radius: 25px 5px 25px 5px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%; /* ajusta la posición vertical */
+  left: 50%; /* ajusta la posición horizontal */
+  transform: translate(-50%, -50%);
+  width: 40px; /* tamaño del icono */
+  height: 40px;
+  z-index: 2;
+}
+
+.img-play {
+  background-color: rgba(68, 68, 68, 0.4); /* gris con transparencia */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 2px solid #03d5fa;
+  padding: 10px;
+  border-radius: 25px 5px 25px 5px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+
+  /* 🔽 Transición general para suavizar entrada y salida */
+  transition: all 0.3s ease;
+}
+
+.img-play:hover {
+  background-color: rgba(3, 213, 250, 0.2);
+  border-bottom: 2px solid #00ffff;
+  box-shadow: 0 0 15px #03d5fa, 0 0 30px #03d5fa;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.img-play:active {
+  transform: translate(-50%, -50%) scale(0.95);
+  box-shadow: 0 0 8px #03d5fa, 0 0 15px #03d5fa;
+}
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                        CONTENEDOR = POPULAR GAME                                               **
+ **                                               segunda fila                                                     **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.popular-game {
+  display: flex;
+  background-color: rgba(68, 68, 68, 0.4);
+  backdrop-filter: blur(2px);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  flex-direction: column;
+  border: 3px solid #000;
+  
+}
+
+
+.popular-game h2 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.popular-scroll {
+  margin-top: 20px;
+  max-height: 40vh;
+  max-width: auto;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #2c2c2c;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+
+.popular-scroll::-webkit-scrollbar {
+  width: 8px;
+  display: none;               /* Chrome, Safari, Edge */
+}
+
+.popular-scroll::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.popular-scroll::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.popular-table td {
+  padding: 15px 16px;
+  background-color: transparent;
+  border-radius: 0;
+  color: white;
+}
+
+/* Fila normal */
+.popular-table tbody tr {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover azul */
+.popular-table tbody tr:hover {
+  background-color: #007bff;
+}
+
+/* Texto blanco al hacer hover o seleccionar */
+.popular-table tbody tr:hover td,
+.popular-table tbody tr.selected td {
+  color: white;
+}
+
+/* Selección activa */
+.popular-table tbody tr.selected {
+  background-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .popular-scroll {
+    height: 750px; /* Altura adaptativa para pantallas pequeñas */
+    width: 350px;
+    justify-content: space-between;
+    font-size: small;
+  }
+}
+
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                          CONTENEDOR = PROMOTIONS                                               **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.promotions {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-height: 100vh;
+  position: relative;
+  flex: 1;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 0px;
+  color: white;
+  overflow: hidden;
+  
+}
+
+@media (max-width: 768px) {
+  .promotions {
+    height: 200px; /* Altura adaptativa para pantallas pequeñas */
+  }
+}
+
+
+.promotions-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.promo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.promo-img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.promo-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+  padding: 10px;
+  background: rgba(68, 68, 68, 0.4);
+  border-radius: 25px 5px 25px 5px;
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid #03d5fa;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #03d5fa;
+}
+
+
+
+/********************************************************************************************************************                                 
+ **                                                                                                                **
+ **                                           CONTENEDOR = ratings                                                 **
+ **                                               tercera fila                                                     **
+ **                                                                                                                **
+ *******************************************************************************************************************/
+
+.ratings {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  flex-wrap: nowrap;     /* NECESARIO para scroll horizontal */
+  max-width: 100%; 
+}
+
+
+.ranking-section {
+  padding: 20px;
+  max-width: 100%;
+  overflow: hidden; /* ← importante para evitar que hijos lo empujen */
+}
+
+
+.ranking-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.ratings-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  max-width: 100vw;
+  cursor: grab;
+
+  /* Ocultar scrollbar (todos los navegadores) */
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE 10+ */
+}
+
+
+.ratings-wrapper::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge */
+}
+
+.ratings-wrapper:active {
+  cursor: grabbing;
+}
+
+.game-card {
+  flex: 0 0 calc(100% / 7 - 20px); /* 7 tarjetas con espacio de 20px */
+  min-width: 160px; /* mínimo tamaño para evitar quiebres */
+  max-width: 200px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .game-card {
+    flex: 0 0 calc(100% / 5 - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .game-card {
+    flex: 0 0 calc(100% / 4 - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .game-card {
+    flex: 0 0 calc(100% / 3 - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .game-card {
+    flex: 0 0 calc(100% / 2 - 20px);
+  }
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.score {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-bottom: 2px solid #03d5fa;
+  background: rgba(68, 68, 68, 0.4);
+  border-radius: 15px 5px 15px 5px;
+  backdrop-filter: blur(8px);
+}
+
+.top-game .trophy {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  color: gold;
+  filter: drop-shadow(1px 1px 2px black);
+}
