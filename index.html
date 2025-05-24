@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+   <div class="menu-overlay">
+   </div>
+  
+</body>
 
   <!-- 🔹 SIDEBAR -->
   <div class="sidebar">
@@ -47,11 +51,15 @@
   <!-- 🔹 CONTENEDOR PRINCIPAL -->
   <div class="container">
 
-    <!-- 🔸 HEADER -->
+    <!-- 🔸 HEADER ----->
     <div class="header">
       <div class="left">
+        <button class="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
         <img src="image/menu_2/Logo.png" class="logo" />
-
         <div class="menu-header">
           <ul>
             <li>PC</li>
@@ -62,9 +70,6 @@
             <li>GAMEPASS</li>            
           </ul>
         </div>
-
-        
-
       </div>
       <div class="right">
         <img src="image/menu_1/ES.png" class="Es" />
@@ -730,7 +735,7 @@
         </div>
       </div>
 
-
+  <!-- ⭐ FILA 3: Ratings -->
 
       <div class="ratings">
 
@@ -825,32 +830,12 @@
         </div>
       </div>
 
-
-
-      
-      
   </div> <!-- 🔚 Cierra .main-content -->
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div> <!-- 🔚 Cierra .container -->
 
-  <!-- ⭐ FILA 3: Ratings -->
-
-  
-
   <!-- 🔸 Scripts -->
-   <script src="ranking.js" defer></script>
+   <script src="despliegue-menu.js" defer></script>
+  <script src="ranking.js" defer></script>
   <script src="search.js" defer></script>
   <script src="top-games.js" defer></script>
   <script src="carousel-new.js" defer></script>
