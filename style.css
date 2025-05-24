@@ -506,7 +506,8 @@ body {
   border-radius: 20px;
   padding: 0; /* ← sin padding para que la imagen se alinee a los bordes */
   overflow: hidden; /* ← evita que la imagen se desborde */
-  height: auto; /* puedes forzar un alto si deseas: ej. 250px */
+  min-height: 350px; /* puedes forzar un alto si deseas: ej. 250px */
+  max-height: auto;
   display: flex;
 }
 
