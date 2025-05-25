@@ -304,7 +304,14 @@ body {
     transform: translateX(-100%);
     transition: transform 0.35s cubic-bezier(0.77,0.2,0.05,1.0); /* animación suave */
     box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    padding-bottom: 40px; /* espacio para evitar que el último elemento quede tapado */
   }
+
   .sidebar.open {
     display: flex;
     flex-direction: column;
